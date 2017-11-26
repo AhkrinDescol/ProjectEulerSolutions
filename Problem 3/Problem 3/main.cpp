@@ -5,8 +5,8 @@
 
 int main()
 {
-	constexpr long int subjectNumber{600851475143};
-	constexpr long int subNumRoot{std::ceil(std::sqrt(subjectNumber))};
+	const long long int subjectNumber{600851475143};
+	const long long int subNumRoot{std::ceil(std::sqrt(subjectNumber))};
 
 	std::cout << subjectNumber << std::endl;
 	return 0;
