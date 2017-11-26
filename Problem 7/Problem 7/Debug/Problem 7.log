@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\workspace\projecteulersolutions\problem 7\problem 7\main.cpp(16): warning C4244: 'argument': conversion from '__int64' to 'int', possible loss of data
+  Problem 7.vcxproj -> D:\Workspace\ProjectEulerSolutions\Problem 7\Debug\Problem 7.exe
+  Problem 7.vcxproj -> D:\Workspace\ProjectEulerSolutions\Problem 7\Debug\Problem 7.pdb (Partial PDB)

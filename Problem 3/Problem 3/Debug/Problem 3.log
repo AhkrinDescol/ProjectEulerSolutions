@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\workspace\projecteulersolutions\problem 3\problem 3\main.cpp(18): warning C4244: '=': conversion from '__int64' to 'long', possible loss of data
+  Problem 3.vcxproj -> D:\Workspace\ProjectEulerSolutions\Problem 3\Debug\Problem 3.exe
+  Problem 3.vcxproj -> D:\Workspace\ProjectEulerSolutions\Problem 3\Debug\Problem 3.pdb (Partial PDB)
