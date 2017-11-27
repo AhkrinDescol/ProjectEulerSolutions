@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\workspace\projecteulersolutions\problem 8\problem 8\main.cpp(20): warning C4018: '>': signed/unsigned mismatch
+  Problem 8.vcxproj -> D:\Workspace\ProjectEulerSolutions\Problem 8\Debug\Problem 8.exe
+  Problem 8.vcxproj -> D:\Workspace\ProjectEulerSolutions\Problem 8\Debug\Problem 8.pdb (Partial PDB)
