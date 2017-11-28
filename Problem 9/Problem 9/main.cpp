@@ -36,9 +36,9 @@ std::vector<int> findSpecialTriplet()
 	std::vector<int> tripletValues;
 	for (int c{sumLimit}; c > 0; --c)
 	{
-		for (int b{c - 1}; b > 0; --b)
+		for (int b{sumLimit - c}; b > 0; --b)
 		{
-			for (int a{b - 1}; a > 0; --a)
+			for (int a{sumLimit - b}; a > 0; --a)
 			{
 				if (a + b + c == sumLimit)
 				{
