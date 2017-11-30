@@ -18,7 +18,7 @@ int main()
 		std::cout << "Error: File does not exist, exiting..." << std::endl;
 		return 1;
 	}
-	const auto gridValues{readValuesIntoGrid(inputStream)};
+	const std::vector<std::vector<int>> gridValues{readValuesIntoGrid(inputStream)};
 	inputStream.close();
 	std::cout << findGreatestProductInGrid(gridValues) << std::endl;
 	return 0;
@@ -98,9 +98,9 @@ int greatestColumnProduct(const std::vector<std::vector<int>>& grid)
 	int greatestColumnProduct{0};
 	const size_t valuesPerProduct{4};
 	const size_t offset{valuesPerProduct - 1};
-	for (size_t x{0}; x < grid[0].size(); ++x)
+	for (size_t y{0}; y < grid.size() - offset; ++y)
 	{
-		for (size_t y{0}; y < grid.size() - offset; ++y)
+		for (size_t x{0}; x < grid[0].size(); ++x)
 		{
 			int product{1};
 			for (size_t i{0}; i < valuesPerProduct; ++i)
@@ -121,9 +121,9 @@ int greatestDownRightDiagonalProduct(const std::vector<std::vector<int>>& grid)
 	int greatestDiagonalProduct{0};
 	const size_t valuesPerProduct{4};
 	const size_t offset{valuesPerProduct - 1};
-	for (size_t x{0}; x < grid[0].size() - offset; ++x)
+	for (size_t y{0}; y < grid.size() - offset; ++y)
 	{
-		for (size_t y{0}; y < grid.size() - offset; ++y)
+		for (size_t x{0}; x < grid[0].size() - offset; ++x)
 		{
 			int product{1};
 			for (size_t i{0}; i < valuesPerProduct; ++i)
@@ -144,8 +144,20 @@ int greatestDownLeftDiagonalProduct(const std::vector<std::vector<int>>& grid)
 	int greatestDiagonalProduct{0};
 	const size_t valuesPerProduct{4};
 	const size_t offset{valuesPerProduct - 1};
-	for (size_t x{offset}; x < grid[0].size(); ++x)
+	for (size_t y{0}; y < grid.size() - offset; ++y)
 	{
-		for (size_t y{0}; y < grid.size() - offset; ++)
+		for (size_t x{offset}; x < grid[0].size(); ++x)
+		{
+			int product{1};
+			for (size_t i{0}; i < valuesPerProduct; ++i)
+			{
+				product *= grid[x - i][y + i];
+			}
+			if (product > greatestDiagonalProduct)
+			{
+				greatestDiagonalProduct = product;
+			}
+		}
 	}
+	return greatestDiagonalProduct;
 }
