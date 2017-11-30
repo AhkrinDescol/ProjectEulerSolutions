@@ -7,7 +7,31 @@
 //		 Find the value of the first triangle number that has over five hundred
 //		 divisors.
 
+int findFirstTriangleNumberWithNDivisors(int numDivisorsToFind);
+int findNumDivisors(int number);
+
 int main()
 {
-	
+	const int numDivisorsToFind{500};
+	std::cout << findFirstTriangleNumberWithNDivisors(numDivisorsToFind) << std::endl;
+
+	return 0;
+}
+
+int findFirstTriangleNumberWithNDivisors(int numDivisorsToFind)
+{
+	int targetValue{numDivisorsToFind};
+	while (findNumDivisors(targetValue) <= numDivisorsToFind)
+	{
+		++targetValue;
+	}
+	return targetValue;
+}
+
+int findNumDivisors(int number)
+{
+	for (int i{1}; i <= number; ++i)
+	{
+
+
 }
