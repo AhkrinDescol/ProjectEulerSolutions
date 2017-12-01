@@ -21,6 +21,7 @@ int main()
 
 int findTriangleNumberWithOverNDivisors(int numDivisorsToFind)
 {
+	//BUG: Currently just incrementing, not operating on triangle numbers!
 	int targetValue{static_cast<int>(std::pow(numDivisorsToFind, 2))};
 	while (findNumDivisors(targetValue) <= numDivisorsToFind)
 	{
