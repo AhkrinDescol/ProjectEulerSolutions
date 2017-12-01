@@ -21,11 +21,19 @@ int main()
 
 int findTriangleNumberWithOverNDivisors(int numDivisorsToFind)
 {
-	//BUG: Currently just incrementing, not operating on triangle numbers!
-	int targetValue{static_cast<int>(std::pow(numDivisorsToFind, 2))};
+	int triangleIndex{0};
+	int targetValue{0};
+	// Target number cannot be lower than the number of divisors desired.  Builds
+	// target value up to the minimum triangle number value above numDivisorsToFind.
+	while (targetValue < numDivisorsToFind)
+	{
+		++triangleIndex;
+		targetValue += triangleIndex;
+	}
 	while (findNumDivisors(targetValue) <= numDivisorsToFind)
 	{
-		++targetValue;
+		++triangleIndex;
+		targetValue += triangleIndex;
 	}
 	return targetValue;
 }
